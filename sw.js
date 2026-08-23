@@ -1,6 +1,6 @@
 /* 离线缓存 Service Worker — 部署到 HTTPS 后自动生效，离线也能打卡 */
-const CACHE = 'learn30-v1';
-const ASSETS = ['./', './index.html', './manifest.webmanifest'];
+const CACHE = 'learn30-v2';
+const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
